@@ -19,7 +19,7 @@ jobs:
           include-hidden-files: true
 
   Linting:
-    runs-on: unbuntu-latest 
+    runs-on: ubuntu-latest 
     needs: [Build]
     steps: 
       - name: Download code
