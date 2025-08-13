@@ -1,5 +1,12 @@
 name: Main workflow
-on: push
+on:
+   push:
+      branches:
+      - main
+   pull_request:
+    branches:
+      - main
+      
 env: # Set the secret as an input
   docker_username: olsgaard1
   docker_password: ${{ secrets.GITHUB_TOKEN }}
@@ -77,6 +84,8 @@ jobs:
           path: .
       - name: Execute performance test
         run: bash ci/performance-test.sh
+
+ 
      
       
        
